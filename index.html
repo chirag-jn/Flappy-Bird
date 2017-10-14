@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<title>Flappy Bird</title>
+	<link href="style.css" rel="stylesheet">
 </head>
 <body>
-
+	<div id="container">
+		<div id="bird">
+		</div>
+		<div id="pole1" class="pole"></div>
+		<dir id="pole2" class="pole"></dir>
+	</div>
+	<div id="score">
+		<p><b>Score: </b><span id="score">0</span></p>
+		<p><b>Speed: </b><span id="speed">10</span></p>
+	</div>
+	<button id="restart">Restart</button>
+	<script src="jquery.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
