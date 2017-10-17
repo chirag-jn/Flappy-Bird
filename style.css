@@ -44,17 +44,19 @@ body {
 #score_div {
     text-align: center;
     font-size: 40px;
+    background-color: beige;
 }
 
 #restart_btn {
     position: absolute;
     top: 0;
     width: 100%;
+    height: 410px;
     padding: 20px;
-    background-color: fuchsia;
+    background-color: darkorange;
     color: white;
     font-size: 35px;
     border: none;
     cursor: pointer;
     display: none;
-}
+}                       

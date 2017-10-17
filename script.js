@@ -1,6 +1,5 @@
 $(function () {
 
-    //saving dom objects to variables
     var container = $('#container');
     var bird = $('#bird');
     var pole = $('.pole');
@@ -18,8 +17,6 @@ $(function () {
     var bird_left = parseInt(bird.css('left'));
     var bird_height = parseInt(bird.height());
     var speed = 10;
-
-    //some other declarations
     var go_up = false;
     var score_updated = false;
     var game_over = false;
@@ -97,7 +94,7 @@ $(function () {
     function stop_the_game() {
         clearInterval(the_game);
         game_over = true;
-        restart_btn.slideDown();
+        restart_btn.slideToggle();
     }
 
     restart_btn.click(function () {
@@ -110,7 +107,7 @@ $(function () {
         var h1 = $div1.outerHeight(true);
         var w1 = $div1.outerWidth(true);
         var b1 = y1 + h1;
-        var r1 = x1 + w1;
+        var r1 = x1 + w1 - 20;
         var x2 = $div2.offset().left;
         var y2 = $div2.offset().top;
         var h2 = $div2.outerHeight(true);
