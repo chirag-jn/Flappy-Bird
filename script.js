@@ -20,11 +20,12 @@ $(function () {
     var go_up = false;
     var score_updated = false;
     var game_over = false;
-
+    var vel = 0	
 
     var the_game = setInterval(function () {
 
-        if (collision(bird, pole_1) || collision(bird, pole_2) || parseInt(bird.css('top')) <= 0 || parseInt(bird.css('top')) > container_height - bird_height) {
+        if (collision(bird, pole_1) || collision(bird, pole_2) || parseInt(bird.css('top')) <= 0 || parseInt(bird.css('top')) > container_height - bird_height) 
+	{
 
             stop_the_game();
 
@@ -84,11 +85,13 @@ $(function () {
 
 
     function go_down() {
-        bird.css('top', parseInt(bird.css('top')) + 5);
+	vel = vel + 2
+        bird.css('top', parseInt(bird.css('top')) + vel);
     }
 
     function up() {
-        bird.css('top', parseInt(bird.css('top')) - 10);
+	vel = -9
+        bird.css('top', parseInt(bird.css('top')) + vel);//-10
     }
 
     function stop_the_game() {
